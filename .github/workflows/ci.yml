@@ -1,0 +1,54 @@
+name: Benchmarking Libraries
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write # To write the generated contents to the readme
+  packages: read
+  statuses: write # To report GitHub Actions status checks
+  actions: write # Needed for detection of GitHub Actions environment.
+  id-token: write # Needed for provenance signing and ID.
+  pull-requests: write
+
+jobs:
+  python-libs:
+    name: benchamrking
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Chekout sources
+        uses: actions/checkout@v7.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v9.0.0
+        with:
+            enable-cache: false
+      
+      - name: Set up Python
+        run: uv python install
+      
+      - name: Bench engines
+        run: uv run scripts/bench_engines.py
+      
+      - name: Cache compares
+        run: uv run scripts/cache_compares.py
+      
+      - name: JSON decode and encode
+        run: uv run scripts/json_speed.py
+      
+      - name: Lazy Polars
+        run: uv run scripts/polars_lazy.py
+      
+      - name: Rich verification
+        run: uv run scripts/rich_verify.py
+      
+      - name: Slug hypothesis
+        run: uv run scripts/slugify_hypothesis.py
+      
+      - name: Tenacity compares
+        run: uv run scripts/tenacity_compares.py
