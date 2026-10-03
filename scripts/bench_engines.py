@@ -2,17 +2,17 @@
 # requires-python = ">=3.12"
 # dependencies = [
 #     "requests",
-#	  "duckdb",
-#	  "polars",
-#	  "pandas",
-#	  "pyarrow",
-#	  "numpy",
-#	  "msgspec",
-#	  "orjson",
-#	  "pydantic",
-#	  "hypothesis",
-#	  "diskcache",
-#	  "tenacity"
+#     "duckdb",
+#     "polars",
+#     "pandas",
+#     "pyarrow",
+#     "numpy",
+#     "msgspec",
+#     "orjson",
+#     "pydantic",
+#     "hypothesis",
+#     "diskcache",
+#     "tenacity",
 #     "rich",
 # ]
 # ///

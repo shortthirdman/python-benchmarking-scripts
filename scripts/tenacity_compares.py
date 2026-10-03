@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "tenacity",
+#     "rich",
+# ]
+# ///
+
 """tenacity demo: retry a flaky API with exponential backoff.
 
 FlakyService fails the first three calls with a ConnectionError. The
