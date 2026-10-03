@@ -1,8 +1,7 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#     "functools",
-#	  "diskcache",
+#     "diskcache",
 #     "rich",
 # ]
 # ///

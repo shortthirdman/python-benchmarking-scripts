@@ -1,8 +1,8 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#	  "polars",
-#	  "numpy",
+#     "polars",
+#     "numpy",
 #     "rich",
 # ]
 # ///

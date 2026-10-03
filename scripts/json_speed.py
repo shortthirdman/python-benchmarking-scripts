@@ -2,9 +2,9 @@
 # requires-python = ">=3.12"
 # dependencies = [
 #     "requests",
-#	  "msgspec",
-#	  "orjson",
-#	  "pydantic",
+#     "msgspec",
+#     "orjson",
+#     "pydantic",
 #     "rich",
 # ]
 # ///
